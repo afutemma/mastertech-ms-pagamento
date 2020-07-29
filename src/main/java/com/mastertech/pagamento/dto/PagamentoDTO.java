@@ -4,7 +4,7 @@ public class PagamentoDTO {
 
 
     private int id;
-    private int cartao_id;
+    private int cartaoId;
     private String descricao;
     private double valor;
 
@@ -17,12 +17,12 @@ public class PagamentoDTO {
         this.id = id;
     }
 
-    public int getCartao_id() {
-        return cartao_id;
+    public int getCartaoId() {
+        return cartaoId;
     }
 
-    public void setCartao_id(int cartao_id) {
-        this.cartao_id = cartao_id;
+    public void setCartaoId(int cartaoId) {
+        this.cartaoId = cartaoId;
     }
 
     public String getDescricao() {

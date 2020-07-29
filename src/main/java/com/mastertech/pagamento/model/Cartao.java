@@ -13,8 +13,8 @@ public class Cartao implements Serializable {
     private boolean ativo;
 
     public Cartao() {
-    }
 
+    }
 
     public int getClienteId() {
         return clienteId;

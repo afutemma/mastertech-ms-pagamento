@@ -28,13 +28,13 @@ public class PagamentoService {
 
         Cartao cartao;
         try {
-            cartao = cartaoClient.getCartaoById(pagamentoDTO.getCartao_id());
+            cartao = cartaoClient.getCartaoPorId(pagamentoDTO.getCartaoId());
 
         }catch(FeignException.BadRequest e){
             cartao = new Cartao();
         }
 
-        pagamento.setIdCartao(pagamentoDTO.getCartao_id());
+        pagamento.setIdCartao(pagamentoDTO.getCartaoId());
         pagamento.setDescricao(pagamentoDTO.getDescricao());
 
         repository.save(pagamento);

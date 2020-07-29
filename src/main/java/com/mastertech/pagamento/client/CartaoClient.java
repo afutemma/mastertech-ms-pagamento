@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface CartaoClient {
 
     @GetMapping("/cartao/byId/{id}")
-    Cartao getCartaoById(@PathVariable int id);
+    Cartao getCartaoPorId(@PathVariable int id);
 
 }
