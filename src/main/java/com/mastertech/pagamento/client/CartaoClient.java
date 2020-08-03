@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name="cartao")
 public interface CartaoClient {
 
-    @GetMapping("/cartao/byId/{id}")
+    @GetMapping("v1/cartao/byId/{id}")
     Cartao getCartaoPorId(@PathVariable int id);
 
 }

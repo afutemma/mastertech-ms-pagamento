@@ -27,12 +27,8 @@ public class PagamentoService {
         pagamento.setValor(pagamentoDTO.getValor());
 
         Cartao cartao;
-        try {
-            cartao = cartaoClient.getCartaoPorId(pagamentoDTO.getCartaoId());
 
-        }catch(FeignException.BadRequest e){
-            cartao = new Cartao();
-        }
+        cartao = cartaoClient.getCartaoPorId(pagamentoDTO.getCartaoId());
 
         pagamento.setIdCartao(pagamentoDTO.getCartaoId());
         pagamento.setDescricao(pagamentoDTO.getDescricao());
@@ -45,6 +41,11 @@ public class PagamentoService {
     }
 
     public List<Pagamento> listar(int idCartao) {
+
         return repository.findAllByIdCartao(idCartao);
+    }
+
+    public List<Pagamento> listarTudo(){
+        return repository.findAll();
     }
 }

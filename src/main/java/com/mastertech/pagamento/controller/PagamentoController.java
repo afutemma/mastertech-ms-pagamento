@@ -28,4 +28,10 @@ public class PagamentoController {
         return pgts;
     }
 
+    @GetMapping("/pagamentos")
+    public List<Pagamento> consultarPagamentos(){
+        List<Pagamento> pgts = service.listarTudo();
+        return pgts;
+    }
+
 }
