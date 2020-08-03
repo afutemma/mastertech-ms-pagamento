@@ -45,6 +45,10 @@ public class PagamentoService {
         return repository.findAllByIdCartao(idCartao);
     }
 
+    public int deletarTudoPorCartao(int idCartao){
+        return repository.deleteCartaoId(idCartao);
+    }
+
     public List<Pagamento> listarTudo(){
         return repository.findAll();
     }

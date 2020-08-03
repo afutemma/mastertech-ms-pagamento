@@ -21,6 +21,11 @@ public class PagamentoController {
         return ResponseEntity.ok(service.save(pagamento));
     }
 
+    @PostMapping("/pagamento/pagar/{idCartao}")
+    public ResponseEntity postCartao(@PathVariable int idCartao) {
+        return ResponseEntity.ok(service.deletarTudoPorCartao(idCartao));
+    }
+
 
     @GetMapping("/pagamentos/{numerocartao}")
     public List<Pagamento> consultarPagamentos(@PathVariable int numerocartao){

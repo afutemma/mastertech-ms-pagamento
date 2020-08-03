@@ -10,6 +10,7 @@ public class Pagamento implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "id_cartao")
     private int idCartao;
     private double valor;
     private String descricao;
